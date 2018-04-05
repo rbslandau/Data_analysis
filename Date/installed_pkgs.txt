@@ -1,3 +1,0 @@
-DAAG
-dplyr
-beanplot
