@@ -47,8 +47,8 @@ options(max.print = 50)
 #' We start by importing a data file from the university website (obviously, you require an internet connection to 
 #' successfully run the command). To store the data after import, we assign (<-) the data to an object (*data*). 
 link <- "http://www.uni-koblenz-landau.de/en/campus-landau/faculty7/environmental-sciences/landscape-ecology/Teaching/possum.csv"
-# link is not properly displayed in knitted document, but shown if you locate the mouse
-# pointer over the URL
+# link is not properly displayed in knitted document, but you can copy it from
+# the Session_1.R document (which you should use anyway to run the R code yourself)
 data <- read.table(link)
 #' The object *data* is now shown in the *Environment pane* in R Studio.
 #' For interested students: **What happens if you run the read table function without assignment to an object?**
@@ -85,7 +85,7 @@ close(url(link))
 #' For further details on how to import data refer to [this tutorial](https://www.datacamp.com/community/tutorials/r-data-import-tutorial).
 #' 
 #' We inspect the imported data again.
-# show first 6 rows of dataframe
+# show first 3 rows of dataframe
 head(pos_dat) 
 # looks ok
 str(pos_dat)  
@@ -98,6 +98,8 @@ str(pos_dat)
 #' [possums](https://en.wikipedia.org/wiki/Phalangeridae#/media/File:Brushtail_possum.jpg) that were published in @LindenmayerMorphologicalVariationPopulations1995. To access an R package, we have
 #' to load and attach a package with the function $\textcolor {MidnightBlue}{library}$:
 library(DAAG)
+#' If you do not have the package installed, you need to install the package via:
+# install.packages("DAAG") # (remove comment in this case)
 #' If loaded and attached, we can subsequently load the possum data, which we have imported from a file above,
 #' quite conveniently (e.g. without the need to specify separator or decimal point) from the package:
 data(possum)
@@ -130,7 +132,7 @@ colnames(pos_dat)
 #' If we want to access variables in a dataframe, we can do this as follows: 
 pos_dat$totlngth
 # Displays the data stored in the column totlngth (total length of a possum)
-#' Generally, we can access parts of objects including vectors, matrics, data.frames and lists with squared brackets:
+#' Generally, we can access parts of objects including vectors, matrices, data.frames and lists with squared brackets:
 # Select column via name
 pos_dat[ , "totlngth"]
 #' **If you assign the resulting data to a new object, of what class (e.g. list, vector, matrix) is the resulting object?** 
@@ -282,8 +284,6 @@ dev.off()
 #' have been introduced [@KampstraBeanplotBoxplotAlternative2008]. The related paper is [available via open access](http://www.jstatsoft.org/v28/c01/). 
 #' Refer to the paper and the lecture for explanation of the plot. We first load and attach the package:
 library(beanplot)
-#' If you do not have the package installed, you need to install the package via:
-# install.packages("beanplot") # (remove comment in this case)
 #' Now we create a beanplot for the total lenght of possums
 beanplot(pos_dat$totlngth) 
 # provides single observations (lines), mean (thick line) and 
@@ -347,12 +347,12 @@ pos_dat %>%
 #' We can also use the beanplot for comparison:
 beanplot(w ~ Pop, data = pos_dat, las = 1, cex.lab = 1.3, 
         ylab = "Distance to median [cm]", xlab = "Possum population")
-# The Victorian possum population is less symmetric presumably due to the higher
-# proportion of females in the population (superimposition of two distributions)
-#' The Victorian population is less symmetric than the 
-#' Note that we can again use the same arguments for the boxplot and beanplot function. Quite convenient, isn't it? However,
+
+#' The Victorian population is less symmetric than the population from other states, presumably due to the higher proportion of 
+#' females in the population (superimposition of two distributions). Note that we can again use the same arguments for the boxplot 
+#' and beanplot function. Quite convenient, isn't it? However,
 #' the beanplot displays the mean instead of median. **Try to produce the same plot with the mean substracted from each observation!** *Hint:
-#' the function to calculate the mean is mean().*
+#' the function to calculate the mean is* $\textcolor {MidnightBlue}{mean()}$.
 #' 
 #' Another assumption of several data analysis tools is that the data is normally distributed. This can be checked using 
 #' the so-called *QQ-plot*, which plots theoretical Quantiles from a normal distribution against the sample Quantiles 
@@ -376,7 +376,7 @@ qqline(pos_dat$totlngth)
 library(DAAG)
 qreference(pos_dat$totlngth, nrep = 8, xlab = "Theoretical Quantiles") 
 # nrep controls the number of reference plots
-#' The reference plots give an idea how data randomly sampled data from a normal distribution can deviate from the theoretical
+#' The reference plots give an idea how data randomly sampled from a normal distribution can deviate from the theoretical
 #' normal distribution. Clearly, the data (blue) does not look conspicuous when compared to the reference plots (purple).
 #' 
 #' A similar approach is to plot the QQ-plot for the data among reference QQ-plots without indication in the figure 
