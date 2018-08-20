@@ -2,3 +2,5 @@ Code/.Rhistory
 Code/0_a_prep_script.R
 Slides/0_Definitions.Rmd
 Slides/.Rhistory
+.gitignore
+Code/Session_2*
