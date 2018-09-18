@@ -1,7 +1,7 @@
 #' ---
 #' title: "Session 1: First steps in R and data exploration"
 #' author: "Ralf B. Schäfer"
-#' date: "April 10, 2018"
+#' date: "September 24, 2018"
 #' output: pdf_document
 #' urlcolor: blue
 #' bibliography: /Users/ralfs/Literatur/Natural_Sciences.bib
@@ -11,7 +11,7 @@
 #' 
 #' # First steps
 #' Before we begin, some notes on notation and terminology: **Bold statements** mostly refer to little exercises or questions, R functions
-#' inside text are *italicised* and coloured in $\textcolor {MidnightBlue}{MidnightBlue}$ and [this is an URL](https://www.uni-koblenz-landau.de/en/campus-landau/faculty7/environmental-sciences/landscape-ecology/teaching/r-statistics)
+#' inside the text look like this: `function()` and [this is an URL](https://www.uni-koblenz-landau.de/en/campus-landau/faculty7/environmental-sciences/landscape-ecology/teaching/r-statistics)
 #' that brings you to the course website. R code chunks are formatted as follows
 #' (This code does not run!):
 #+ eval=FALSE
@@ -28,7 +28,7 @@ object_assignment <- thisfunction(argument = does_not_work$it_only_serves_illust
 #' specified otherwise, will look for files to load or will save files. The working directory can be set through the
 #' R Studio [Graphical User Interface (GUI)](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1):
 #' Go to Session –> Set Working Directory –> Choose Directory... . However,
-#' you can also do this from the command line using the command $\textcolor {MidnightBlue}{setwd}$:
+#' you can also do this from the command line using the command `setwd()`:
 setwd("~/Gitprojects/Teaching/Data_analysis/Code")
 #' If you run the script, you have to replace my file path with a path to a working directory 
 #' on your local machine. To simplify the identification of your path, you can use the 
@@ -36,7 +36,7 @@ setwd("~/Gitprojects/Teaching/Data_analysis/Code")
 #+ eval=FALSE
 file.choose()
 #' and select a file in your desired working directory. Subsequently, copy the path
-#' **without** the file reference into the $\textcolor {MidnightBlue}{setwd}$ function. Make sure
+#' **without** the file reference into the `setwd()` function. Make sure
 #' to enclose the path with double quotation marks. Finally, we set an option to reduce the amount of output
 #' that is printed to save some space in this document:
 options(max.print = 50)
@@ -54,7 +54,7 @@ data <- read.table(link)
 #' For interested students: **What happens if you run the read table function without assignment to an object?**
 #' *Hint: Inspect the Console pane in R Studio.*
 #' 
-#' Useful functions to inspect imported data are $\textcolor {MidnightBlue}{head}$ and $\textcolor {MidnightBlue}{str}$.
+#' Useful functions to inspect imported data are `head()` and `str()`.
 #' **Try what these functions do by running them on the imported data and by calling the related help pages
 #' as shown below:**
 #+ eval=FALSE 
@@ -76,7 +76,7 @@ str(data)
 #' * row.names: specify row names, a variable that provides row names (our data set actually contains a variable
 #' *row.names*, but we ignore that) or import without row names (= NULL)
 #' 
-#' Call $\textcolor {MidnightBlue}{?read.table}$ for further details and options. 
+#' Call `?read.table` for further details and options. 
 #' Misspecification of import arguments is one of the most frequent errors of beginners. 
 #' We run the import function again, now with the arguments properly specified.
 pos_dat <- read.table(url(link), dec = ".", sep = ";", header = TRUE, row.names = NULL)
@@ -96,7 +96,7 @@ str(pos_dat)
 
 #' The file was taken from the R package [DAAG](https://cran.r-project.org/web/packages/DAAG/index.html) and contains information on 
 #' [possums](https://en.wikipedia.org/wiki/Phalangeridae#/media/File:Brushtail_possum.jpg) that were published in @LindenmayerMorphologicalVariationPopulations1995. To access an R package, we have
-#' to load and attach a package with the function $\textcolor {MidnightBlue}{library}$:
+#' to load and attach a package with the function `library()`:
 library(DAAG)
 #' If you do not have the package installed, you need to install the package via:
 # install.packages("DAAG") # (remove comment in this case)
@@ -112,7 +112,7 @@ head(possum)
 #' execute the following code:
 #+ eval=FALSE
 save(pos_dat, file = "Possum.Rdata")
-#'  Of course, you can provide a different path to the file argument in the $\textcolor {MidnightBlue}{save}$ function.
+#'  Of course, you can provide a different path to the file argument in the `save()` function.
 #' **Where has the file been saved?** *Hint: If you can't find the file, run the following function:*
 #+ eval=FALSE
 getwd()
@@ -128,7 +128,7 @@ load("Possum.Rdata")
 names(pos_dat)
 #' or:
 colnames(pos_dat)
-#' The function $\textcolor {MidnightBlue}{colnames}$, in contrast to $\textcolor {MidnightBlue}{names}$, also works for matrices.
+#' The function `colnames()`, in contrast to `names()`, also works for matrices.
 #' If we want to access variables in a dataframe, we can do this as follows: 
 pos_dat$totlngth
 # Displays the data stored in the column totlngth (total length of a possum)
@@ -158,9 +158,9 @@ pos_dat$totlngth[pos_dat$totlngth > 95]
 pos_dat[pos_dat$totlngth > 95, "totlngth"]
 # Subset dataframe
 pos_dat[pos_dat$totlngth > 95, ]
-#' To query values *smaller or equal than* is done in R via $\textcolor {MidnightBlue}{<=}$, to query values *larger or equal than* is 
-#' done via $\textcolor {MidnightBlue}{>=}$. Similarly, $\textcolor {MidnightBlue}{==}$ means *equal*, 
-#' and $\textcolor {MidnightBlue}{!=}$ means *not equal*. We exemplify this by querying selected variables conditioned
+#' To query values *smaller or equal than* is done in R via `<=`, to query values *larger or equal than* is 
+#' done via `>=`. Similarly, `==` means *equal*, 
+#' and `!=` means *not equal*. We exemplify this by querying selected variables conditioned
 #' by the sex of the possums:
 # Select male possums
 pos_dat[pos_dat$sex == "m", c(5,7:9)]
@@ -168,7 +168,7 @@ pos_dat[pos_dat$sex == "m", c(5,7:9)]
 pos_dat[pos_dat$sex == "f", c(5,7:9)]
 # Select female possums as those not male
 pos_dat[pos_dat$sex != "m", c(5,7:9)]
-#' Sometimes it is necessary to know the row numbers that meet a condition. These can be queried using the $\textcolor {MidnightBlue}{which}$ function:
+#' Sometimes it is necessary to know the row numbers that meet a condition. These can be queried using the `which()` function:
 which(pos_dat$totlngth > 95)
 #' In every scripting or programming language, you often have multiple ways to reach a result. 
 #' **Try yourself: Store the vector resulting from the 'which' function and use it as condition for subsetting the dataframe pos_dat**. 
@@ -194,17 +194,17 @@ filter(pos_dat, totlngth > 95)
 filter(pos_dat, sex == "m")
 # Combine conditions
 filter(pos_dat, totlngth > 95 & sex == "m")
-#' We can also combine $\textcolor {MidnightBlue}{select}$ and $\textcolor {MidnightBlue}{filter}$:
+#' We can also combine `select()` and `filter()`:
 select(filter(pos_dat, sex == "m"), totlngth, sex, skullw)
-#' In this example, the output of $\textcolor {MidnightBlue}{filter}$ takes the position of 
-#' the *data* argument in the $\textcolor {MidnightBlue}{select}$ function. A particular strength of dplyr is the use of 
+#' In this example, the output of `filter()` takes the position of 
+#' the *data* argument in the `select()` function. A particular strength of dplyr is the use of 
 #' [pipelines](https://en.wikipedia.org/wiki/Pipeline_(Unix)), defined in the R context as a sequence of functions, where the output from one
 #' function feeds directly as input of the next function. This can also enhance readability. Consider for example the previous code
-#' (combination of $\textcolor {MidnightBlue}{select}$ and $\textcolor {MidnightBlue}{filter}$) rewritten as pipe (pipe operator: %>%):
+#' (combination of `select()` and `filter()`) rewritten as pipe (pipe operator: %>%):
 pos_dat %>%
   filter(sex == "m") %>%
   select(totlngth, sex, skullw)
-#' dplyr also provides a useful function ($\textcolor {MidnightBlue}{arrange}$) to sort a dataframe according to selected variables:
+#' dplyr also provides a useful function (`arrange()`) to sort a dataframe according to selected variables:
 pos_dat %>%
   arrange(totlngth)
 # now in descending order
@@ -217,7 +217,7 @@ pos_dat[ord_1, ]
 pos_dat %>%
   arrange(age, desc(totlngth)) %>%
   select(age, totlngth, belly)
-#' Another useful function is $\textcolor {MidnightBlue}{rename}$:
+#' Another useful function is `rename()`:
 pos_dat %>%
   rename(total_length = totlngth)
 # We inspect the original dataframe
@@ -238,7 +238,7 @@ pos_dat %>%
 #' # Data exploration
 #' 
 #' After we have learnt how to process data, we explore the data that will be analysed in the next session. Although graphical tools are most suitable 
-#' to obtain an overview on data, the $\textcolor {MidnightBlue}{summary}$ function quickly provides information on potential outliers, 
+#' to obtain an overview on data, the `summary()` function quickly provides information on potential outliers, 
 #' missing values (*NA's*) and the range of data:
 # Reset max.print options to 100 to avoid that information is omitted
 options(max.print = 120)
@@ -269,9 +269,9 @@ boxplot(pos_dat$totlngth, las = 1, cex.lab = 1.3,
 boxplot(totlng_outl, las = 1, cex.lab = 1.3, 
         ylab = "Total length [cm]", main = "Data overview")
 #' You can save a figure from the graphics device using the graphical user interface (*Export* in R Studio). Direct export of 
-#' a figure without plotting in R Studio can be done using specific functions such as $\textcolor {MidnightBlue}{jpeg}$, 
-#' $\textcolor {MidnightBlue}{png}$ or $\textcolor {MidnightBlue}{pdf}$. For details see $\textcolor {MidnightBlue}{?jpeg}$ and 
-#' $\textcolor {MidnightBlue}{?pdf}$
+#' a figure without plotting in R Studio can be done using specific functions such as `jpeg()`, 
+#' `png()` or `pdf()`. For details see `?jpeg` and 
+#' `?pdf`
 #+ eval = FALSE
 # example for directly exporting the boxplot to a file
 jpeg("Boxplot.jpeg", quality = 100)
@@ -303,14 +303,14 @@ boxplot(totlngth ~ Pop, data = pos_dat, las = 1, cex.lab = 1.3,
 #' per factor level of the variable *Pop*. 
 #' 
 #' To ease visual comparison of the spread around the median, we put both variables on the same median. This can be done with the base
-#' R function $\textcolor {MidnightBlue}{tapply}$ that applies a function to each group of data defined by the levels of a factor.
+#' R function `tapply()` that applies a function to each group of data defined by the levels of a factor.
 #' We calculate the median for each group and assign it to the object *med*:
 med <- tapply(pos_dat$totlngth, pos_dat$Pop, median)
 # first argument: data, second argument: factor, third argument: function
 # to be applied to each group defined by the factor
 med
-#' The same calculation can be done using dplyr functions. We need two new functions $\textcolor {MidnightBlue}{group\_by}$ and
-#' $\textcolor {MidnightBlue}{summarise}$ to elegently do this. **Check what is done by calling the help for the new functions and
+#' The same calculation can be done using dplyr functions. We need two new functions `group_by()` and
+#' `summarise()` to elegently do this. **Check what is done by calling the help for the new functions and
 #' by sequential execution of the code below (i.e. first execute the code until second %>% (not included), then until third %>%
 #' (not included)):**  
 pos_dat %>% 
@@ -352,7 +352,7 @@ beanplot(w ~ Pop, data = pos_dat, las = 1, cex.lab = 1.3,
 #' females in the population (superimposition of two distributions). Note that we can again use the same arguments for the boxplot 
 #' and beanplot function. Quite convenient, isn't it? However,
 #' the beanplot displays the mean instead of median. **Try to produce the same plot with the mean substracted from each observation!** *Hint:
-#' the function to calculate the mean is* $\textcolor {MidnightBlue}{mean()}$.
+#' the function to calculate the mean is* `mean()`.
 #' 
 #' Another assumption of several data analysis tools is that the data is normally distributed. This can be checked using 
 #' the so-called *QQ-plot*, which plots theoretical Quantiles from a normal distribution against the sample Quantiles 
@@ -365,8 +365,8 @@ qqnorm(pos_dat$totlngth)
 # We add a line that goes through the first and third quartiles, 
 # which helps to spot deviations.
 qqline(pos_dat$totlngth)
-#' The deviations here are minor and can be ignored. Again, you may ask: *When should we be concerned about a difference
-#' in the variance?* A helpful function in this context is $\textcolor {MidnightBlue}{qreference}$ provided 
+#' The deviations here are minor and can be ignored. Again, you may ask: *When should we be concerned about a deviation?*
+#' A helpful function in this context is `qreference()` provided 
 #' in the package [DAAG](https://cran.r-project.org/web/packages/DAAG/index.html), which relates to the book
 #' by Maindonald & Braun [-@MaindonaldDataanalysisgraphics2010]. It produces reference plots to aid in 
 #' the evaluation whether the data are normally distributed. The reference plots are based on sample quantiles from
