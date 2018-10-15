@@ -1,3 +1,13 @@
+
 DAAG
 dplyr
 beanplot
+learnr
+vegan
+sandwich
+lmtest
+sjPlot
+permute
+boot
+car
+caret
