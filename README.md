@@ -22,7 +22,9 @@ install.packages("package_name")
 ```
 
 ## Links to videos
-Coming soon
+[Session 2: Linear regression](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=99bc5c3a-29a4-4611-97f2-a958007b8ff7)  
+
+[Session 3: Assessing hypotheses and simulation-based tools](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=6dea59e1-57fd-4e28-9b58-a958007b9ea6)
 
 ## Links to R tutorials available for some sessions
 [Session 2: Linear regression](http://139.14.20.252:3838/session/2/)  
