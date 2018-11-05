@@ -1,7 +1,7 @@
 #' ---
 #' title: "Session 1: First steps in R and data exploration"
 #' author: "Ralf B. Schäfer"
-#' date: "September 24, 2018"
+#' date: "`r Sys.Date()`"
 #' output: pdf_document
 #' urlcolor: blue
 #' bibliography: /Users/ralfs/Literatur/Natural_Sciences.bib
