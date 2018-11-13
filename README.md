@@ -36,6 +36,8 @@ install.packages("package_name")
 
 [Session 3: Assessing hypotheses and simulation-based tools](http://139.14.20.252:3838/session/3/)
 
+[Session 4: ANOVA, ANCOVA, multiple regression and interactions](http://139.14.20.252:3838/session/4/)
+
 
 ## Acknowledgments
 * Several course assistants are thanked for their assistance in the lecture (e.g. [Stefan Kunz](https://www.uni-koblenz-landau.de/en/campus-landau/faculty7/environmental-sciences/landscape-ecology/staff/stefan-kunz) and
