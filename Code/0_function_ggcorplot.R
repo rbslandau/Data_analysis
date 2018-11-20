@@ -1,5 +1,4 @@
 # Function downloaded from http://groups.google.com/group/ggplot2/attach/6bf632a9718dddd6/ggcorplot.R?part=2, written by Mike Lawrence
-library(ggplot2)
 
 #define a helper function (borrowed from the "ez" package)
 ezLev=function(x,new_order){
