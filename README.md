@@ -30,6 +30,7 @@ install.packages("package_name")
 
 [Session 4: ANOVA, ANCOVA, multiple regression and interactions](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=01bc0b2d-6c6f-4ed6-a3e0-a958007ba530)
 
+[Session 5: Multiple regression: Modelling strategies](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=2c70d7c4-8452-42fb-a561-a99e014c1e5b)
 
 ## Links to R tutorials available for some sessions
 [Session 2: Linear regression](http://139.14.20.252:3838/session/2/)  
