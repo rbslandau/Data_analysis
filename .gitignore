@@ -8,8 +8,8 @@ Code/Session_3/*
 Code/Session_4/*
 Code/Session_5/*
 # exceptions
-Code/Session_2/.gitkeep
-Code/Session_3/.gitkeep
-Code/Session_4/.gitkeep
-Code/Session_5/.gitkeep
+!Code/Session_2/.gitkeep
+!Code/Session_3/.gitkeep
+!Code/Session_4/.gitkeep
+!Code/Session_5/.gitkeep
 
