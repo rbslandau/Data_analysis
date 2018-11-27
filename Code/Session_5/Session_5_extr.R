@@ -171,15 +171,40 @@ coef(mod_5_s)[-1] * shrink_res1$ShrinkageFactors
 shrink_res2 <- shrink(mod_5_s, type = "parameterwise")
 shrink_res2
 
+## ----lasso_1, include = TRUE, echo = TRUE--------------------------------
+library(glmnet)
+# fit model with lasso, requires predictors as matrix
+# and response as vector
+lasso_mod <- glmnet(x = as.matrix(data_env), y = data_oc2$E100)
+plot(lasso_mod, label = TRUE)
+
+## ----lasso_2, include = TRUE, echo = TRUE--------------------------------
+plot(lasso_mod, label = TRUE, xvar = "lambda")
+plot(lasso_mod, label = TRUE, xvar = "dev")
+
+## ----lasso_cv, include = TRUE, echo = TRUE-------------------------------
+# set seed to make reproducible
+set.seed(111)
+cvfit <- cv.glmnet(as.matrix(data_env), data_oc2$E100)
+plot(cvfit)
+
+## ----lasso_extract, include = TRUE, echo = TRUE--------------------------
+# extract lambdas
+cvfit$lambda.min
+cvfit$lambda.1se
+# extract regression coefficients
+coef(cvfit, s = "lambda.min")
+coef(cvfit, s = "lambda.1se")
+
 ## ----mod_vis_pedagog, include = TRUE, echo = TRUE------------------------
 library(car)
 mcPlots(mod_2, ~SP, overlaid = FALSE)
 
 ## ----mod_vis_effects, include = TRUE, echo = TRUE------------------------
 library(effects)
-plot(predictorEffects(mod = mod_5_s, predictor = "SP"))
-plot(predictorEffects(mod = mod_5_s, predictor = "BT"))
-plot(predictorEffects(mod = mod_5_s, predictor = "DPlog"))
+plot(predictorEffects(mod = mod_5_s, predictor = "SP"), ylab = "Rarefied richness (100 ind.)")
+plot(predictorEffects(mod = mod_5_s, predictor = "BT"), ylab = "Rarefied richness (100 ind.)")
+plot(predictorEffects(mod = mod_5_s, predictor = "DPlog"), ylab = "Rarefied richness (100 ind.)")
 
 ## ----select_inf, include = TRUE, echo = TRUE-----------------------------
 # load library for functions
@@ -202,18 +227,9 @@ coef(fs_model, s = 4)
 
 ## ----bootstrapping_BIC, include = TRUE, echo = TRUE----------------------
 library(bootStepAIC)
-# Preparation: we need the response variable and predictors in one dataframe
-# we create a new object (never manipulate your raw data!)
-data_env2 <- data_env
-# add response variable
-data_env2$resp_e100 <- data_oc2$E100
 # set seed to make analysis reproducible
 set.seed(111)
-# Use function, see help for details 
+# See help for details on function
 # as before k can be used to select BIC
-boot.stepAIC(mod_1, data_env2, k = log(n), direction = "backward")
-
-## ----bootstrapping_AIC, include = TRUE, echo = TRUE----------------------
-set.seed(111)
-boot.stepAIC(mod_1, data_env2, k = 2, direction = "backward")
+boot.stepAIC(object = mod_1, data = data_env, k = log(n), direction = "backward")
 
