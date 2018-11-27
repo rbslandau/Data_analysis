@@ -3,7 +3,13 @@ Code/0_a_prep_script.R
 Slides/0_Definitions.Rmd
 Slides/.Rhistory
 .gitignore
-Code/Session_2*
-Code/Session_3*
-Code/Session_4*
-Code/Session_5*
+Code/Session_2/*
+Code/Session_3/*
+Code/Session_4/*
+Code/Session_5/*
+# exceptions
+Code/Session_2/.gitkeep
+Code/Session_3/.gitkeep
+Code/Session_4/.gitkeep
+Code/Session_5/.gitkeep
+
