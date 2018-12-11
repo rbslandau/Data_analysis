@@ -101,10 +101,10 @@ The left plot shows a QQ-plot for *randomized quantile residuals*, the right plo
 
 You find several exercises under the `Exercises` tab. 
 
-You can also find them [here](https://github.com/EDiLD/shiny_apps/blob/master/glm_explorer/exercises.md) (click on `Raw` to get the file).
-It is best if you have the exercises open in a separate (browser) window.
+You can also find them [here](https://raw.githubusercontent.com/rbslandau/Data_analysis/master/Code/Session_6/glm_explorer/exercises.md) (click on `Raw` and then copy or download).
+To do the exercises is most convenient, if you have them open in a separate (browser) window.
 
-You can always reset to start by pressing `F5` in your browser.
+You can always reset the app by pressing `F5` in your browser.
 
 
 
