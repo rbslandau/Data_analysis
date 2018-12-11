@@ -7,9 +7,17 @@ Code/Session_2/*
 Code/Session_3/*
 Code/Session_4/*
 Code/Session_5/*
+Code/Session_6/*
+Code/Session_6/glm_explorer/*
 # exceptions
 !Code/Session_2/Session_2_extract.R
 !Code/Session_3/Session_3_extract.R
 !Code/Session_4/Session_4_extr.R
 !Code/Session_5/Session_5_extr.R
-
+!Code/Session_6/glm_explorer/exercises.md
+!Code/Session_6/glm_explorer/functions.R
+!Code/Session_6/glm_explorer/introduction.md
+!Code/Session_6/glm_explorer/README
+!Code/Session_6/glm_explorer/server.R
+!Code/Session_6/glm_explorer/shiny.Rproj
+!Code/Session_6/glm_explorer/ui.R
