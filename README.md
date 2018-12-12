@@ -41,8 +41,15 @@ install.packages("package_name")
 
 [Session 5: Multiple regression: Modelling strategies](http://139.14.20.252:3838/session/5/)
 
+[Session 6a: GLM explorer](http://139.14.20.252:3838/session/6_glm/)
+
+
+
+
 ## Acknowledgments
 * Several course assistants are thanked for their assistance in the lecture (e.g. [Stefan Kunz](https://www.uni-koblenz-landau.de/en/campus-landau/faculty7/environmental-sciences/landscape-ecology/staff/stefan-kunz) and
 [Le Trong Dieu Hien](https://www.uni-koblenz-landau.de/en/campus-landau/faculty7/environmental-sciences/landscape-ecology/Staff/dieuhien/letrongdieuhien)).
 * [Achim Zeileis](https://eeecon.uibk.ac.at/~zeileis/) is thanked for development and support with the
 [R exams](http://www.r-exams.org) package that is used for automated test generation in this course
+* and of course a huge thanks to all the package authors and the whole R community as
+well as the stackexchange and stackoverflow
