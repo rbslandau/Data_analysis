@@ -12,7 +12,7 @@ You can modify the data and model in two modules (tabs):
 
 Under `Simulate` you can specify the properties of the simulated data, including error structure, model parameters and sample size.
 Under `Model` you can specify the GLM that is fitted to the simulated data.
-Additional tabs provide you with model information. The `Model summary` tab provides the output of the `summary()` function, `Model coefficients` provides a visual overview of the estimated regression coefficients and `Model diagnostics` provides diagnostic plots for the fitted model. You can either explore for yourself or follow `Exercises` (see tab).
+Additional tabs provide you with model information. The `Model summary` tab provides the output of the `summary()` function, `Model coefficients` provides a visual overview of the estimated regression coefficients and `Model diagnostics` provides diagnostic plots for the fitted model. You can either explore for yourself or follow `Exercises` (see tab). I recommend following the exercises as they are designed to provide you with the most relevant insights.
 
 
 
@@ -39,7 +39,7 @@ The link-function $f()$ can be set to:
 1. identity link: $g(\mu) = \mu$
 2. log link: $g(\mu) = log_e(\mu)$
 
-For the ordinary linear regression you need to select `Gaussian` and the `identity` link. If you use a log link, you should set a small `Slope ($\beta_1$)` of around 0.1 and a small `Interaction between *x* and *fac* ($\beta_3$)` of 0 or 0.1, otherwise you won't see much of the variation.
+For the ordinary linear regression you need to select `Gaussian` and the `identity` link. If you use a log link, you should set a small slope (i.e. $\beta_1$) of around 0.1 and a small interaction term (i.e. $\beta_3$) of 0 or 0.1, otherwise you won't see much of the variation.
 
 The effect of the continuous and categorical variables *x* and *fac* can be set via the related regression coefficients:
 
@@ -101,8 +101,7 @@ The left plot shows a QQ-plot for *randomized quantile residuals*, the right plo
 
 You find several exercises under the `Exercises` tab. 
 
-You can also find them [here](https://raw.githubusercontent.com/rbslandau/Data_analysis/master/Code/Session_6/glm_explorer/exercises.md) (click on `Raw` and then copy or download).
-To do the exercises is most convenient, if you have them open in a separate (browser) window.
+You can also find them [here](https://raw.githubusercontent.com/rbslandau/Data_analysis/master/Code/Session_6/glm_explorer/exercises.md). To do the exercises is most convenient, if you have them open in a separate (browser) window. You can also copy and paste the text into a text editor or download it into a file and then open in related program.
 
 You can always reset the app by pressing `F5` in your browser.
 
