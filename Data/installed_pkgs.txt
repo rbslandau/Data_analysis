@@ -19,6 +19,17 @@ MuMIn
 relaimpo
 hier.part
 shrink
+glmnet
 effects
 selectiveInference
 bootStepAIC
+MASS
+ggfortify
+gridExtra
+markdown
+DHARMa
+shiny
+xkcd
+extrafont
+modEvA
+countreg

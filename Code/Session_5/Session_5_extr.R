@@ -1,4 +1,4 @@
-## ----load_data, include = TRUE, echo = TRUE, purl = TRUE, context = "data"----
+## ----load_data, include = TRUE, echo = TRUE, purl = TRUE, context = "setup"----
 data_oc <- read.csv("http://datadryad.org/bitstream/handle/10255/dryad.39576/OstraMRegS400JB.txt?sequence=1", sep = "\t")
 
 ## ----data_range_summ, include = TRUE, echo = TRUE, purl = TRUE-----------
@@ -19,7 +19,7 @@ hist(data_oc2$LON)
 ## ----data_range_hist3, include = TRUE, echo = TRUE, purl = TRUE----------
 hist(log10(data_oc2$DP))
 
-## ----add_variable, include = TRUE, echo = TRUE, context = "data"---------
+## ----add_variable, include = TRUE, echo = TRUE, context = "setup"--------
 data_oc2$DPlog <- log10(data_oc$DP)
 
 ## ----remove_vars2, include = TRUE, echo = TRUE, context = "setup"--------
@@ -76,9 +76,15 @@ print(allmodels)
 topmod <- get.models(allmodels, subset = 1)
 print(topmod)
 
-## ----model_avg_mod, include = TRUE, echo = TRUE, context = "setup"-------
+## ----model_avg_mod, include = TRUE, echo = TRUE--------------------------
+library(MuMIn)
 avg_model <- model.avg(allmodels, subset = delta < 2, fit = TRUE)
 summary(avg_model)
+
+## ----recalc_models, include = TRUE, echo = TRUE--------------------------
+allmodels2 <- dredge(mod_1, extra = "R^2", rank = "BIC")
+avg_model_bic <- model.avg(allmodels2, subset = delta < 2, fit = TRUE)
+summary(avg_model_bic)
 
 ## ----model_avg_accuracy_meas, include = TRUE, echo = TRUE----------------
 fit_y <-  predict(avg_model)
@@ -195,6 +201,9 @@ cvfit$lambda.1se
 # extract regression coefficients
 coef(cvfit, s = "lambda.min")
 coef(cvfit, s = "lambda.1se")
+
+## ----lasso_extract_zero, include = TRUE, echo = TRUE---------------------
+coef(cvfit, s = 1)
 
 ## ----mod_vis_pedagog, include = TRUE, echo = TRUE------------------------
 library(car)
