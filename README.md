@@ -45,6 +45,8 @@ install.packages("package_name")
 
 [Session 6a: GLM explorer](http://139.14.20.252:3838/session/6_glm/)
 
+[Session 6b: GLM tutorial](http://139.14.20.252:3838/session/6/)
+
 
 
 
