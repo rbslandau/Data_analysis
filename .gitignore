@@ -22,3 +22,4 @@ Code/Session_6/glm_explorer/*
 !Code/Session_6/glm_explorer/server.R
 !Code/Session_6/glm_explorer/shiny.Rproj
 !Code/Session_6/glm_explorer/ui.R
+.DS_Store
