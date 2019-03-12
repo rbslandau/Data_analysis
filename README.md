@@ -34,6 +34,8 @@ install.packages("package_name")
 
 [Session 6: GLMs](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=637d7b94-7b22-4a46-9543-a9b400ecbe77)
 
+[Session 7: Unsupervised learning: CART](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=bf84220e-1181-4874-9615-a9fa00d04757)
+
 ## Links to R tutorials available for some sessions
 [Session 2: Linear regression](http://139.14.20.252:3838/session/2/)  
 
