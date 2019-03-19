@@ -9,6 +9,7 @@ Code/Session_4/*
 Code/Session_5/*
 Code/Session_6/*
 Code/Session_6/glm_explorer/*
+Code/Session_7/*
 # exceptions
 !Code/Session_2/Session_2_extract.R
 !Code/Session_3/Session_3_extract.R
@@ -22,4 +23,6 @@ Code/Session_6/glm_explorer/*
 !Code/Session_6/glm_explorer/server.R
 !Code/Session_6/glm_explorer/shiny.Rproj
 !Code/Session_6/glm_explorer/ui.R
+!Code/Session_7/Session_7_extr.R
+!Code/Session_7/data_EC.csv
 .DS_Store
