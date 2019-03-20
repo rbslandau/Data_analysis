@@ -34,9 +34,10 @@ extrafont
 modEvA
 countreg
 rpart
-rpart.plot
-InformationValue
+party
 partykit
+InformationValue
+rpart.plot
 devtools
 mvpart
 MVPARTwrap

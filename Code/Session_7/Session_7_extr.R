@@ -1,3 +1,13 @@
+## ----setup, include = FALSE, purl = TRUE---------------------------------
+knitr::opts_chunk$set(echo = FALSE)
+library(learnr)
+library(DAAG)
+library(rpart)
+library(party)
+library(partykit)
+library(dplyr)
+library(InformationValue)
+
 ## ----load_data, include = TRUE, echo = TRUE, purl = TRUE-----------------
 library(DAAG)
 # display first rows
@@ -121,6 +131,7 @@ colnames(rsqu_1) <- c("Rsquare", "Xval Rsquare")
 rsqu_1
 
 ## ----cond_tree,  include = TRUE, echo = TRUE, eval = TRUE, purl = TRUE----
+library(party)
 library(partykit)
 # convert response to factor
 resp_frogfac <- as.factor(resp_frogs)
