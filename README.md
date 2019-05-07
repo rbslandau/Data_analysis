@@ -36,6 +36,8 @@ install.packages("package_name")
 
 [Session 7: Unsupervised learning: CART](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=bf84220e-1181-4874-9615-a9fa00d04757)
 
+[Session 8: Principal component analysis](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=405ff463-8701-4bf1-a05d-aa4500fa6ba9)
+
 ## Links to R tutorials available for some sessions
 [Session 2: Linear regression](http://139.14.20.252:3838/session/2/)  
 
