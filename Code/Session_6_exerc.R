@@ -22,11 +22,11 @@ pa_data$biome <- factor(pa_data$biome)
 
 #############################################################################
 # Exercise: Evaluate which environmental variables are most important 		#
-# for the occurence of the Bradypus?											#
+# for the occurence of the Bradypus?										#
 # Model the presence - absence as response and use the other variables		#
 # as predictors. Select a method of your choice and run a complete 			#
-# statistical modelling including variable selection	 and model diagnosis. 	#
-# Plot nad interpret the model with effect plots and, if applicable,			#
+# statistical modelling including variable selection	 and model diagnosis.#
+# Plot nad interpret the model with effect plots and, if applicable,		#
 # determine the variable importance for a final model that you select.		#
 #############################################################################
 
