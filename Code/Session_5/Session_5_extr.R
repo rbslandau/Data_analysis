@@ -44,10 +44,11 @@ data_check <- data_oc2[ , !names(data_oc2) %in% c("E100", "DP", "SR")]
 ##               geom_point(colour = "blue") +
 ##               geom_smooth(method = method, color = "red", ...)
 ##   p
+##   }
 ## # Run ggpairs()
 ## ggpairs(data_check, lower = list(continuous = wrap(lowerFn, method = "lm")),
 ##                     diag = list(continuous = wrap("densityDiag", colour = "blue")),
-##                     upper = list(continuous = wrap("cor", size = 10)))})
+##                     upper = list(continuous = wrap("cor", size = 10)))
 
 
 
@@ -288,7 +289,7 @@ coef(cvfit, s = 1)
 
 
 ## ----lasso_stabsel, include = TRUE, echo = TRUE--------------------------
-library("stabs")
+library(stabs)
 ## make reproducible
 set.seed(1204)
 (stab.lasso <- stabsel(x = as.matrix(data_env), y = data_oc2$E100,

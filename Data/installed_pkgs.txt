@@ -20,6 +20,7 @@ relaimpo
 hier.part
 shrink
 glmnet
+stabs
 effects
 selectiveInference
 bootStepAIC
