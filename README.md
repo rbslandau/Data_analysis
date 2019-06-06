@@ -51,7 +51,11 @@ install.packages("package_name")
 
 [Session 6b: GLM tutorial](http://139.14.20.252:3838/session/6/)  
 
-[Session 7: CART tutorial](http://139.14.20.252:3838/session/7/)
+[Session 7: CART tutorial](http://139.14.20.252:3838/session/7/)  
+
+[Session 8: PCA tutorial](http://139.14.20.252:3838/session/8/)  
+
+
 
 
 ## Acknowledgments
