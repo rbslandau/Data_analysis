@@ -39,21 +39,21 @@ install.packages("package_name")
 [Session 8: Principal component analysis](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=405ff463-8701-4bf1-a05d-aa4500fa6ba9)
 
 ## Links to R tutorials available for some sessions
-[Session 2: Linear regression](http://139.14.20.252:3838/session/2/)  
+[Session 2: Linear regression](http://data-analysis.uni-landau.de/session/2/)  
 
-[Session 3: Assessing hypotheses and simulation-based tools](http://139.14.20.252:3838/session/3/)
+[Session 3: Assessing hypotheses and simulation-based tools](http://data-analysis.uni-landau.de/session/3/)
 
-[Session 4: ANOVA, ANCOVA, multiple regression and interactions](http://139.14.20.252:3838/session/4/)
+[Session 4: ANOVA, ANCOVA, multiple regression and interactions](http://data-analysis.uni-landau.de/session/4/)
 
-[Session 5: Multiple regression: Modelling strategies](http://139.14.20.252:3838/session/5/)
+[Session 5: Multiple regression: Modelling strategies](http://data-analysis.uni-landau.de/session/5/)
 
-[Session 6a: GLM explorer](http://139.14.20.252:3838/session/6_glm/)
+[Session 6a: GLM explorer](http://data-analysis.uni-landau.de/session/6_glm/)
 
-[Session 6b: GLM tutorial](http://139.14.20.252:3838/session/6/)  
+[Session 6b: GLM tutorial](http://data-analysis.uni-landau.de/session/6/)  
 
-[Session 7: CART tutorial](http://139.14.20.252:3838/session/7/)  
+[Session 7: CART tutorial](http://data-analysis.uni-landau.de/session/7/)  
 
-[Session 8: PCA tutorial](http://139.14.20.252:3838/session/8/)  
+[Session 8: PCA tutorial](http://data-analysis.uni-landau.de/session/8/)  
 
 
 
