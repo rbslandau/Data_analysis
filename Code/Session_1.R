@@ -20,13 +20,12 @@ object_assignment <- thisfunction(argument = does_not_work$it_only_serves_illust
 #' If you write own R code, consider the [style guide by Hadley Wickham](http://adv-r.had.co.nz/Style.html) as well as using the [styler package](https://cran.r-project.org/web/packages/styler/index.html)
 #' on [files or on code through the RStudio Addins](https://github.com/r-lib/styler).
 #' Although called "First steps", we assume that you have followed short tutorials on installing and using R/R Studio and on the very
-#' basics of R. We recommend the free datacamp course [Introduction to R](https://www.datacamp.com/courses/free-introduction-to-r) and the free
-#' datacamp chapter [Orientation](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1) of the course 
-#' *Working with the R Studio IDE (Part 1)*.
+#' basics of R. We recommend the free datacamp course [Introduction to R](https://www.datacamp.com/courses/free-introduction-to-r) and the first free chapters of this 
+#' [Online book](https://rafalab.github.io/dsbook/).
 #' 
 #' Whenever you start working with R, you should set a working directory. This is the directory where R, unless 
 #' specified otherwise, will look for files to load or will save files. The working directory can be set through the
-#' R Studio [Graphical User Interface (GUI)](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1):
+#' R Studio [Graphical User Interface (GUI)](https://rafalab.github.io/dsbook/getting-started.html#rstudio):
 #' Go to Session –> Set Working Directory –> Choose Directory... . However,
 #' you can also do this from the command line using the command `setwd()`:
 setwd("~/Gitprojects/Teaching/Data_analysis/Code")
@@ -95,11 +94,11 @@ str(pos_dat)
 # int: integer = natural number, num: numeric = real number)   
 
 #' The file was taken from the R package [DAAG](https://cran.r-project.org/web/packages/DAAG/index.html) and contains information on 
-#' [possums](https://en.wikipedia.org/wiki/Phalangeridae#/media/File:Brushtail_possum.jpg) that were published in @LindenmayerMorphologicalVariationPopulations1995. To access an R package, we have
+#' [possums](https://en.wikipedia.org/wiki/Phalangeridae#/media/File:Brushtail_possum.jpg) that were published in @lindenmayerMorphologicalVariationPopulations1995. To access an R package, we have
 #' to load and attach a package with the function `library()`:
 library(DAAG)
 #' If you do not have the package installed, you need to install the package via:
-# install.packages("DAAG") # (remove comment in this case)
+# install.packages("DAAG") # (remove hashtag in this case)
 #' If loaded and attached, we can subsequently load the possum data, which we have imported from a file above,
 #' quite conveniently (e.g. without the need to specify separator or decimal point) from the package:
 data(possum)
@@ -138,9 +137,9 @@ pos_dat[ , "totlngth"]
 #' **If you assign the resulting data to a new object, of what class (e.g. list, vector, matrix) is the resulting object?** 
 #' 
 #' We can also select rows and columns via column and row numbers: 
-# Select 1. to 3. row of the 5. and 6. column
+# Select row 1 to 3 of the column 5 and 6 
 pos_dat[1:3, 5:6] 
-# Select 1., 3. and 4. row of the 7. and 9. column
+# Select row 1, 3 and 4 of columns 7 and 9
 pos_dat[c(1,3,4), c(7,9)] 
 #' If we want to store the selected rows and columns, we can simply assign them to a new object:
 #+ eval=FALSE
@@ -258,7 +257,7 @@ dotchart(pos_dat$totlngth,cex.lab = 1.3,
 totlng_outl <- c(pos_dat$totlngth, 830)
 dotchart(totlng_outl,cex.lab = 1.3, 
          xlab = "Total length [cm]", main = "Data overview") 
-#' The observation at 830 ist an extreme outlier. If you spot such an extreme difference to the remainder
+#' The observation at 830 is an extreme outlier. If you spot such an extreme difference to the remainder
 #' of the data, you should scrutinise the raw data, because an order of magnitude difference points 
 #' to an error with a decimal point during data entry. Another useful tool that can be used for
 #' different purposes including checking for outliers is the boxplot (for brief explanation and different types 
@@ -281,7 +280,7 @@ boxplot(pos_dat$totlngth, las = 1, cex.lab = 1.3,
 dev.off()
 # Switches off the device (here: saves content to file in working directory)
 #' Although the boxplot is widely used and you should be familiar with its interpretation, interesting alternatives such as the beanplot
-#' have been introduced [@KampstraBeanplotBoxplotAlternative2008]. The related paper is [available via open access](http://www.jstatsoft.org/v28/c01/). 
+#' have been introduced [@kampstraBeanplotBoxplotAlternative2008]. The related paper is [available via open access](http://www.jstatsoft.org/v28/c01/). 
 #' Refer to the paper and the lecture for explanation of the plot. We first load and attach the package:
 library(beanplot)
 #' Now we create a beanplot for the total lenght of possums
@@ -310,14 +309,14 @@ med <- tapply(pos_dat$totlngth, pos_dat$Pop, median)
 # to be applied to each group defined by the factor
 med
 #' The same calculation can be done using dplyr functions. We need two new functions `group_by()` and
-#' `summarise()` to elegently do this. **Check what is done by calling the help for the new functions and
+#' `summarise()` to do this elegantly. **Check what is done by calling the help for the new functions and
 #' by sequential execution of the code below (i.e. first execute the code until second %>% (not included), then until third %>%
 #' (not included)):**  
 pos_dat %>% 
   group_by(Pop) %>%
   select(totlngth, Pop) %>%
   summarise(med = median(totlngth)) 
-#' Note that a different type of object is produced using dplyr than using the base R function above:
+#' Note that a different type of object is produced using dplyr than when using the base R function above:
 #' a so-called [tibble](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html).
 #'
 #' Anyway, we proceed within the framework of base R and now substract the respective median from each observation of the groups.
@@ -355,12 +354,12 @@ beanplot(w ~ Pop, data = pos_dat, las = 1, cex.lab = 1.3,
 #' the function to calculate the mean is* `mean()`.
 #' 
 #' Another assumption of several data analysis tools is that the data is normally distributed. This can be checked using 
-#' the so-called *QQ-plot*, which plots theoretical Quantiles from a normal distribution against the sample Quantiles 
-#' (the definition and interpretation of Quantiles is explained in the lecture). If the data originate from a
+#' the so-called *QQ-plot*, which plots theoretical quantiles from a normal distribution against the sample Quantiles 
+#' (the definition and interpretation of quantiles is explained in the lecture). If the data originate from a
 #' normal distribution, the points should approximately fall on a 1:1 line. For statistical tests focusing on
 #' between-group differences, the assumption would need to be checked for each group. Here, we ignore any potential grouping 
 #' structure of the data and exemplify the QQ-plot for the variable total length:
-# Quantile-Quantile plot
+# Quantile-quantile plot
 qqnorm(pos_dat$totlngth)
 # We add a line that goes through the first and third quartiles, 
 # which helps to spot deviations.
@@ -368,19 +367,19 @@ qqline(pos_dat$totlngth)
 #' The deviations here are minor and can be ignored. Again, you may ask: *When should we be concerned about a deviation?*
 #' A helpful function in this context is `qreference()` provided 
 #' in the package [DAAG](https://cran.r-project.org/web/packages/DAAG/index.html), which relates to the book
-#' by Maindonald & Braun [-@MaindonaldDataanalysisgraphics2010]. It produces reference plots to aid in 
+#' by Maindonald & Braun [-@maindonaldDataAnalysisGraphics2010]. It produces reference plots to aid in 
 #' the evaluation whether the data are normally distributed. The reference plots are based on sample quantiles from
 #' data that has been generated through random sampling from a normal distribution with the same parameters (sample mean and sample 
 #' variance) and sample size as the data under evaluation.  
 
 library(DAAG)
-qreference(pos_dat$totlngth, nrep = 8, xlab = "Theoretical Quantiles") 
+qreference(pos_dat$totlngth, nrep = 8, xlab = "Theoretical quantiles") 
 # nrep controls the number of reference plots
 #' The reference plots give an idea how data randomly sampled from a normal distribution can deviate from the theoretical
 #' normal distribution. Clearly, the data (blue) does not look conspicuous when compared to the reference plots (purple).
 #' 
-#' A similar approach is to plot the QQ-plot for the data among reference QQ-plots without indication in the figure 
-#' which QQ-plot relates to the data. Unless the data deviate strongly from a normal distribution, the QQ-plot 
+#' A similar approach is to plot the QQ-plot for the data among reference QQ-plots without indication in the figure, 
+#' which of the QQ-plots relates to the data. Unless the data deviate strongly from a normal distribution, the QQ-plot 
 #' related to the data is presumably indistinguishable from the reference plots. Hence, if you cannot identify the 
 #' QQ-plot related to the data, there is no need for concern regarding a potential deviation from the normal distribution.
 #' The code for this approach is provided in a [blog](https://biologyforfun.wordpress.com/2014/04/16/checking-glm-model-assumptions-in-r/).
@@ -392,12 +391,12 @@ set.seed(2018)
 x <- rbinom(n = 15, size = 5, p = 0.6) 
 # n = sample size, size = number of trials
 # p = probability of success
-#' We use the QQ plot to evaluate normal distribution:
+#' We use the QQ plot to evaluate for normal distribution:
 qqnorm(x)
 # Strong deviation
 qqline(x)
 # The deviation is particularly obvious when compared to reference plots
-qreference(x, nrep = 8, xlab = "Theoretical Quantiles") 
+qreference(x, nrep = 8, xlab = "Theoretical quantiles") 
 #' Even if the data would deviate less from the 1:1 line, the data clearly comes from a discrete distribution, whereas the normal distribution 
 #' is continuous. In the second example, we draw samples from a [uniform distribution](https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)).
 set.seed(2018)
@@ -405,9 +404,9 @@ y <- runif(50, min = 0, max = 20)
 #' Again, we use the QQ plot to evaluate for normal distribution:
 qqnorm(y)
 qqline(y)
-#' A strong deviation is visible, particularly for the lower and upper Quantiles. This impression is confirmed when
+#' A strong deviation is visible, particularly for the lower and upper quantiles. This impression is confirmed when
 #' comparing the QQ-plot for the data to reference QQ-plots. A much stronger curvature is visible.
-qreference(y, nrep = 8, xlab = "Theoretical Quantiles") 
+qreference(y, nrep = 8, xlab = "Theoretical quantiles") 
 
 #' Another useful tool is the histogram. It can be used to check normality of the data, symmetry and whether the data is
 #' bi- or multi-modal. Typically, the histogram displays the frequency with which values of the data fall into, typically
@@ -480,9 +479,9 @@ lines(dens)
 #' To evaluate normality of data in a histogram can be done by overlaying a density line from 
 #' a theoretical normal probability distribution. To do this, we generate a normal distribution
 #' with the parameters (i.e. mean and variance) taken from the sample data.
-# calculate mean
+# calculate sample mean
 mean_samp <- mean(nVic_pos2)
-# calculate standard deviation
+# calculate sample standard deviation
 sd_samp <- sd(nVic_pos2)
 # derive densities for normal distribution
 dens_norm <- dnorm(seq(70, 105, by=.5), mean = mean_samp, sd = sd_samp)
@@ -505,7 +504,7 @@ lines(seq(70, 105, by=.5), dens_norm, col="blue", lwd = 2)
 #' Several other tools for exploratory analysis that have been mentioned in the lecture will be used
 #' and introduced in the context of specific methods of data analysis later in the course.
 #' 
-#' You can render the Rmarkdown document related to the pdf by executing the following function:
+#' You can render the Rmarkdown document related to this pdf by executing the following function:
 # rmarkdown::render("/Users/ralfs/Gitprojects/Teaching/Data_analysis/Code/Session_1.R")
 # You need to replace the file location with the path to your file location.
 
