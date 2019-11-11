@@ -1,7 +1,7 @@
 ############################
 # R exercise Session 2	   #
 ############################	
-# Ralf B. Schäfer, 30.8.2018
+# Ralf B. Schäfer, 11.11.2019
 
 ##############################
 # Preparation for Exercise   #
@@ -61,12 +61,12 @@ save(pos_dat, file = "Possum.Rdata")
 
 
 #################################################################
-# Exercise: Chasing possums can be laborious.   				    #
+# Exercise: Chasing possums can be laborious.   				#
 # An easy way would be to predict their length from footprints.	#
 # Would you recommend to predict the total length of the possum #
 # from traces of their 	feet in the snow?   					#
 # And is an invasive measurement of the skull width necessary   #
 # or can it be approximated with the head length?				#
-# Identify the type of research question, create linear 		    #
+# Identify the type of research question, create linear 		#
 # regression models and run complete model diagnostics			#
 #################################################################

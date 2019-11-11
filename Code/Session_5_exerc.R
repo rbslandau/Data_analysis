@@ -1,7 +1,7 @@
 ############################
 # R exercise Session 5	   #
 ############################	
-# Ralf B. Schäfer, 26.11.2018
+# Ralf B. Schäfer, 11.11.2019
 
 ##############################
 # Preparation for Exercise   #
