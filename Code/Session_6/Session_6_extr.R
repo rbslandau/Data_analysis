@@ -165,6 +165,20 @@ plot(sim_glm3)
 # statistical test
 testDispersion(sim_glm3)
 
+## ----dharma_disp_simul, include = TRUE, echo = TRUE---------------------------- 
+# load library
+library(DHARMa)
+# Create overdispersed data using a function in the package
+Overdisp_data <- createData(sampleSize = 200, overdispersion = 2.5, family = poisson())
+# Fit GLM
+Overdisp_mod <- glm(observedResponse ~ Environment1 , family = "poisson", data = Overdisp_data)
+# Simulate residuals
+Simul_output <- simulateResiduals(fittedModel = Overdisp_mod)
+# Diagnostic plots
+plot(Simul_output)
+# statistical test
+testDispersion(Simul_output)
+
 ## ----residual_plot_per_component, include = TRUE, echo = TRUE------------
 plotResiduals(predictors_lasso$logNoPools, sim_glm3$scaledResiduals)
 plotResiduals(predictors_lasso$logdistance, sim_glm3$scaledResiduals)

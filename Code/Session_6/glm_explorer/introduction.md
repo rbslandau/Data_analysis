@@ -109,5 +109,5 @@ You can always reset the app by pressing `F5` in your browser.
 
 ## Meta
 This app was created using [Shiny](https://shiny.rstudio.com/) from RStudio.
-It was originally written by [Eduard Szöcs](edild.github.io) and has been modified by [Ralf B. Schäfer](https://github.com/rbslandau). It is licensed under [MIT](https://opensource.org/licenses/MIT).
+It was originally written by [Eduard Szöcs](http://edild.github.io/) and has been modified by [Ralf B. Schäfer](https://github.com/rbslandau). It is licensed under [MIT](https://opensource.org/licenses/MIT).
 
