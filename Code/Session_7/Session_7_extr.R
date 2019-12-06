@@ -100,7 +100,7 @@ tree_pruned$variable.importance
 summary(tree_pruned)
 
 ## ----load_data_2, include = TRUE, echo = TRUE, purl = TRUE, context = "setup"----
-data_oc <- read.csv("http://datadryad.org/bitstream/handle/10255/dryad.39576/OstraMRegS400JB.txt?sequence=1", sep = "\t")
+data_oc <- read.csv("https://raw.githubusercontent.com/rbslandau/Data_analysis/master/Data/OstraMRegS400JB.txt", sep = "\t")
 data_oc2 <- data_oc[ , !names(data_oc) %in% c("MDS1", "MDS2", "DCA1", "DCA2", "IC","SA", "SR")]
 
 ## ----reg_tree_fitting,  include = TRUE, echo = TRUE, purl = TRUE---------

@@ -1,7 +1,5 @@
 ## ----load_data, include = TRUE, echo = TRUE, purl = TRUE, context = "setup"----
-data_oc <- read.csv("http://datadryad.org/bitstream/handle/10255/dryad.39576/OstraMRegS400JB.txt?sequence=1", sep = "\t")
-
-
+data_oc <- read.csv("https://raw.githubusercontent.com/rbslandau/Data_analysis/master/Data/OstraMRegS400JB.txt", sep = "\t")
 
 
 
