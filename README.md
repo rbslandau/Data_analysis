@@ -38,6 +38,8 @@ install.packages("package_name")
 
 [Session 8: Principal component analysis](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=405ff463-8701-4bf1-a05d-aa4500fa6ba9)
 
+[Session 9: Redundancy analysis, Similarity measures, NMDS and multivariate GLMs](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=466991f3-ec13-40d8-ba46-ab4201613fcd)
+
 ## Links to R tutorials available for some sessions
 [Session 2: Linear regression](http://139.14.20.252:3838/session/2/)  
 
