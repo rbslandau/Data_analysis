@@ -55,9 +55,9 @@ install.packages("package_name")
 
 [Session 7: CART tutorial](http://139.14.20.252:3838/session/7/)  
 
-[Session 8: PCA tutorial](http://139.14.20.252:3838/session/8/)  
+[Session 8: PCA tutorial](http://139.14.20.252:3838/session/8/) 
 
-
+[Session 9: Multivariate gradients tutorial](http://139.14.20.252:3838/session/9/)  
 
 
 ## Acknowledgments
