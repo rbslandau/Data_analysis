@@ -1,5 +1,5 @@
 ############################
-# R exercise Session 6	   #
+# R exercise Session 8	   #
 ############################	
 # Ralf B. Schäfer, 20.12.2019
 

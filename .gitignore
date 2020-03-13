@@ -11,6 +11,9 @@ Code/Session_6/*
 Code/Session_6/glm_explorer/*
 Code/Session_7/*
 Code/Session_8/*
+Code/Session_9/*
+Code/.Rapp.history
+Data/.Rapp.history
 # exceptions
 !Code/Session_2_exerc.R
 !Code/Session_2_exerc.R
@@ -29,4 +32,5 @@ Code/Session_8/*
 !Code/Session_7/Session_7_extr.R
 !Code/Session_7/data_EC.csv
 !Code/Session_8/Session_8_extr.R
+!Code/Session_9/Session_9_extr.R
 .DS_Store

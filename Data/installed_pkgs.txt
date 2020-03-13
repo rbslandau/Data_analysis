@@ -43,7 +43,7 @@ devtools
 mvpart
 MVPARTwrap
 randomForest
-mvoutlier
 chemometrics
+mvoutlier
 missMDA
 pcaPP
