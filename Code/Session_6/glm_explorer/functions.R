@@ -26,8 +26,9 @@ datagen <- function(n = 100,
   family <- match.arg(family)
   
   x <- runif(n, min = 0, max = 20)
-  fac <- sample(c('A', 'B'), n, replace = TRUE)
-  fac_dummy <- ifelse(fac == 'A', 0, 1)
+  fac1 <- sample(c('A', 'B'), n, replace = TRUE)
+  fac <- factor(fac1)
+  fac_dummy <- ifelse(fac1 == 'A', 0, 1)
   
   # mean
   link_mu <- a + b_x*x + b_fac*fac_dummy + b_int*fac_dummy*x
