@@ -21,7 +21,7 @@ object_assignment <- thisfunction(argument = does_not_work$it_only_serves_illust
 #' on [files or on code through the RStudio Addins](https://github.com/r-lib/styler).
 #' Although called "First steps", we assume that you have followed short tutorials on installing and using R/R Studio and on the very
 #' basics of R. We recommend the free datacamp course [Introduction to R](https://www.datacamp.com/courses/free-introduction-to-r) and the first free chapters of this 
-#' [Online book](https://rafalab.github.io/dsbook/).
+#' [Online book](https://rafalab.github.io/dsbook/). Moreover, a brief introduction into RStudio is available in [this blog](https://www.statsandr.com/blog/how-to-install-r-and-rstudio/).
 #' 
 #' Whenever you start working with R, you should set a working directory. This is the directory where R, unless 
 #' specified otherwise, will look for files to load or will save files. The working directory can be set through the
@@ -38,7 +38,7 @@ file.choose()
 #' **without** the file reference into the `setwd()` function. Make sure
 #' to enclose the path with double quotation marks. Finally, we set an option to reduce the amount of output
 #' that is printed to save some space in this document:
-options(max.print = 50)
+options(max.print = 50, width = 80)
 #' For an overview of the options available to influence computations and displaying check the help:
 #+ eval=FALSE
 ?options

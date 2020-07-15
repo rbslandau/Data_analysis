@@ -47,3 +47,5 @@ chemometrics
 mvoutlier
 missMDA
 pcaPP
+vegan3d
+mvabund
