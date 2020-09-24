@@ -41,7 +41,7 @@ install.packages("package_name")
 [Session 9: Redundancy analysis, Similarity measures, NMDS and multivariate GLMs](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=466991f3-ec13-40d8-ba46-ab4201613fcd)
 
 ## Links to R tutorials available for some sessions
-(university account required, choose these links if you are student of the university)  
+(**university account required, choose these links if you are student of the university**)  
 
 [Session 2: Linear regression](https://data-analysis.uni-landau.de/auth_session/2/)  
 
@@ -63,8 +63,8 @@ install.packages("package_name")
 
 ***
 
-## PUBLIC Links to R tutorials for some sessions
-(no university account required, choose this link if you are in an online study program or for general access)  
+## Public Links to R tutorials for some sessions
+(**no university account required, choose these links if you are in an online study program without university account or for general access**)  
 
 [Session 2: Linear regression](https://data-analysis.uni-landau.de/open_session/2/)  
 
