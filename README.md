@@ -41,23 +41,48 @@ install.packages("package_name")
 [Session 9: Redundancy analysis, Similarity measures, NMDS and multivariate GLMs](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=466991f3-ec13-40d8-ba46-ab4201613fcd)
 
 ## Links to R tutorials available for some sessions
-[Session 2: Linear regression](http://139.14.20.252:3838/session/2/)  
+(university account required, choose these links if you are student of the university)  
 
-[Session 3: Assessing hypotheses and simulation-based tools](http://139.14.20.252:3838/session/3/)
+[Session 2: Linear regression](https://data-analysis.uni-landau.de/auth_session/2/)  
 
-[Session 4: ANOVA, ANCOVA, multiple regression and interactions](http://139.14.20.252:3838/session/4/)
+[Session 3: Assessing hypotheses and simulation-based tools](https://data-analysis.uni-landau.de/auth_session/3/)
 
-[Session 5: Multiple regression: Modelling strategies](http://139.14.20.252:3838/session/5/)
+[Session 4: ANOVA, ANCOVA, multiple regression and interactions](https://data-analysis.uni-landau.de/auth_session/4/)
 
-[Session 6a: GLM explorer](http://139.14.20.252:3838/session/6_glm/)
+[Session 5: Multiple regression: Modelling strategies](https://data-analysis.uni-landau.de/auth_session/5/)
 
-[Session 6b: GLM tutorial](http://139.14.20.252:3838/session/6/)  
+[Session 6a: GLM explorer](https://data-analysis.uni-landau.de/auth_session/6_glm/)
 
-[Session 7: CART tutorial](http://139.14.20.252:3838/session/7/)  
+[Session 6b: GLM tutorial](https://data-analysis.uni-landau.de/auth_session/6/)  
 
-[Session 8: PCA tutorial](http://139.14.20.252:3838/session/8/) 
+[Session 7: CART tutorial](https://data-analysis.uni-landau.de/auth_session/7/)  
 
-[Session 9: Multivariate gradients tutorial](http://139.14.20.252:3838/session/9/)  
+[Session 8: PCA tutorial](https://data-analysis.uni-landau.de/auth_session/8/) 
+
+[Session 9: Multivariate gradients tutorial](https://data-analysis.uni-landau.de/auth_session/9/)  
+
+***
+
+## PUBLIC Links to R tutorials for some sessions
+(no university account required, choose this link if you are in an online study program or for general access)  
+
+[Session 2: Linear regression](https://data-analysis.uni-landau.de/open_session/2/)  
+
+[Session 3: Assessing hypotheses and simulation-based tools](https://data-analysis.uni-landau.de/open_session/3/)
+
+[Session 4: ANOVA, ANCOVA, multiple regression and interactions](https://data-analysis.uni-landau.de/open_session/4/)
+
+[Session 5: Multiple regression: Modelling strategies](https://data-analysis.uni-landau.de/open_session/5/)
+
+[Session 6a: GLM explorer](https://data-analysis.uni-landau.de/open_session/6_glm/)
+
+[Session 6b: GLM tutorial](https://data-analysis.uni-landau.de/open_session/6/)  
+
+[Session 7: CART tutorial](https://data-analysis.uni-landau.de/open_session/7/)  
+
+[Session 8: PCA tutorial](https://data-analysis.uni-landau.de/open_session/8/) 
+
+[Session 9: Multivariate gradients tutorial](https://data-analysis.uni-landau.de/open_session/9/)  
 
 
 ## Acknowledgments
