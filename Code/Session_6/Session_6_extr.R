@@ -180,13 +180,13 @@ plot(Simul_output)
 testDispersion(Simul_output)
 
 ## ----residual_plot_per_component, include = TRUE, echo = TRUE------------
-plotResiduals(predictors_lasso$logNoPools, sim_glm3$scaledResiduals)
-plotResiduals(predictors_lasso$logdistance, sim_glm3$scaledResiduals)
-plotResiduals(predictors_lasso$avrain, sim_glm3$scaledResiduals)
-plotResiduals(predictors_lasso$mean_maxmin, sim_glm3$scaledResiduals)
+plotResiduals(sim_glm3, form = predictors_lasso$logNoPools)
+plotResiduals(sim_glm3, form = predictors_lasso$logdistance)
+plotResiduals(sim_glm3, form = predictors_lasso$avrain)
+plotResiduals(sim_glm3, form = predictors_lasso$mean_maxmin)
 
 ## ----residual_plot_diag1, include = TRUE, echo = TRUE--------------------
-plotResiduals(frogs$distance, sim_glm3$scaledResiduals)
+plotResiduals(sim_glm3, form = frogs$distance)
 
 ## ----simul_quad_prep, include = TRUE, echo = TRUE------------------------
 # define maximum and minimum of gradient and difference between possible values
