@@ -1,6 +1,6 @@
 # Course material for the lecture "Tools for complex data analysis"
 
-by Ralf B. Schäfer, University of Koblenz-Landau, Winter Semester 2020/21
+by Ralf B. Schäfer, University of Koblenz-Landau, Winter Semester 2021/22
 
 ## Overview
 
@@ -88,6 +88,6 @@ install.packages("package_name")
 ## Acknowledgments
 * [Noel Juvigny-Khenafou](https://www.uni-koblenz-landau.de/en/campus-landau/faculty7/environmental-sciences/landscape-ecology/staff/juvigny-khenafou) is thanked for replacing me in teaching this lecture and dealing with the students (I was given partial teaching relief to join university management in the merger process with the TU Kaiserslautern). 
 * [Achim Zeileis](https://eeecon.uibk.ac.at/~zeileis/) is thanked for development and support with the
-[R exams](http://www.r-exams.org) package that is used for automated test generation in this course. [Jonathan Jupke](https://www.uni-koblenz-landau.de/en/campus-landau/faculty7/environmental-sciences/landscape-ecology/staff/jupke) is thanked for help with exam evaluation.
+[R exams](http://www.r-exams.org) package that is used for automated test generation in this course. [Felix Högerl](https://www.uni-koblenz-landau.de/en/campus-landau/faculty7/environmental-sciences/landscape-ecology/staff/hoegerl) is thanked for help with exam evaluation.
 * and of course a huge thanks to all the package authors and the whole R community as
 well as the stackexchange and stackoverflow community.
