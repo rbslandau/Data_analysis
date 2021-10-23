@@ -22,23 +22,23 @@ install.packages("package_name")
 ```
 
 ## Links to videos
-[Session 1: Introduction to data analysis](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=24ca3f8a-9f69-4cdd-af52-a958007b79df)
+[Session 1: Introduction to data analysis](https://vcm.uni-kl.de/Panopto/Pages/Sessions/List.aspx?folderID=3b8033e8-f181-425e-a3ce-ad7c00a108cb)
 
-[Session 2: Linear regression](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=99bc5c3a-29a4-4611-97f2-a958007b8ff7)  
+[Session 2: Linear regression](https://vcm.uni-kl.de/Panopto/Pages/Sessions/List.aspx?folderID=1ab66bfe-a33d-4a6c-889e-ad7c00a108d0)  
 
-[Session 3: Assessing hypotheses and simulation-based tools](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=6dea59e1-57fd-4e28-9b58-a958007b9ea6)
+[Session 3: Assessing hypotheses and simulation-based tools](https://vcm.uni-kl.de/Panopto/Pages/Sessions/List.aspx?folderID=8186339e-19fe-4bd6-b587-ad7c00a108d4)
 
-[Session 4: ANOVA, ANCOVA, multiple regression and interactions](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=01bc0b2d-6c6f-4ed6-a3e0-a958007ba530)
+[Session 4: ANOVA, ANCOVA, multiple regression and interactions](https://vcm.uni-kl.de/Panopto/Pages/Sessions/List.aspx?folderID=e904ac58-dd3c-4379-87ca-ad7c00a108de)
 
-[Session 5: Multiple regression: Modelling strategies](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=2c70d7c4-8452-42fb-a561-a99e014c1e5b)
+[Session 5: Multiple regression: Modelling strategies](https://vcm.uni-kl.de/Panopto/Pages/Sessions/List.aspx?folderID=6de626ae-8fa4-428a-b7b0-ad7c00a111e9)
 
-[Session 6: GLMs](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=637d7b94-7b22-4a46-9543-a9b400ecbe77)
+[Session 6: GLMs](https://vcm.uni-kl.de/Panopto/Pages/Sessions/List.aspx?folderID=856a11a9-7379-4ee5-bfac-ad7c00a1130c)
 
-[Session 7: Unsupervised learning: CART](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=bf84220e-1181-4874-9615-a9fa00d04757)
+[Session 7: Unsupervised learning: CART](https://vcm.uni-kl.de/Panopto/Pages/Sessions/List.aspx?folderID=864561bc-be80-49eb-9b0b-ad7c00a1153e)
 
-[Session 8: Principal component analysis](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=405ff463-8701-4bf1-a05d-aa4500fa6ba9)
+[Session 8: Principal component analysis](https://vcm.uni-kl.de/Panopto/Pages/Sessions/List.aspx?folderID=2129473d-6a6e-46a3-8864-ad7c00a11cdc)
 
-[Session 9: Redundancy analysis, Similarity measures, NMDS and multivariate GLMs](https://videoakademie.ko-ld.de/Panopto/Pages/Sessions/List.aspx?folderID=466991f3-ec13-40d8-ba46-ab4201613fcd)
+[Session 9: Redundancy analysis, Similarity measures, NMDS and multivariate GLMs](https://vcm.uni-kl.de/Panopto/Pages/Sessions/List.aspx?folderID=f993c161-3678-45f8-8a36-ad7c00a12b7d)
 
 ## Links to R tutorials available for some sessions
 (**university account required, choose these links if you are student of the university**)  
