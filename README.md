@@ -1,6 +1,6 @@
 # Course material for the lecture "Tools for complex data analysis"
 
-by Ralf B. Schäfer, University of Koblenz-Landau, Winter Semester 2021/22
+by Ralf B. Schäfer, University of Koblenz-Landau, Winter Semester 2022/23
 
 ## Overview
 
