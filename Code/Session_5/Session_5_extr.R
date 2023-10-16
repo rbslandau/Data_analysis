@@ -335,9 +335,4 @@ coef(fs_model, s = 4)
 
 ## ----bootstrapping_BIC, include = TRUE, echo = TRUE--------------------------------------------------------------
 library(bootStepAIC)
-# set seed to make analysis reproducible
-set.seed(111)
-# See help for details on function
-# as before k can be used to select BIC
-boot.stepAIC(object = mod_1, data = data_env, k = log(n), direction = "backward")
-
+# set seed to make analysis reproducibleset.seed(111)# See help for details on functiondata_env$E100 <- data_oc2$E100# we need a scoping assignment here (will locally run with "normal" assignment)data_env <<- as.data.frame(data_env)mod_1 <- lm(E100 ~ RC + BT + SP + P + LAT + LON, data = data_env)# as before k can be used to select BIC, here we set to number of rowsn <- log(nrow(data_env))boot.stepAIC(object = mod_1, data = data_env, k = n, direction = "backward")
